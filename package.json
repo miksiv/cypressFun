@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "Mikhail Sivinskikh <mikhail.sivinskikh@bwt.ee>",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "^8.4.1"
+  "devDependencies": {
+    "cypress": "^8.5.0"
   }
 }
