@@ -1,0 +1,172 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "type": "string"
+        },
+        "companyName": {
+          "type": "string"
+        },
+        "stockType": {
+          "type": "string"
+        },
+        "exchange": {
+          "type": "string"
+        },
+        "isNasdaqListed": {
+          "type": "boolean"
+        },
+        "isNasdaq100": {
+          "type": "boolean"
+        },
+        "isHeld": {
+          "type": "boolean"
+        },
+        "primaryData": {
+          "type": "object",
+          "properties": {
+            "lastSalePrice": {
+              "type": "string"
+            },
+            "netChange": {
+              "type": "string"
+            },
+            "percentageChange": {
+              "type": "string"
+            },
+            "deltaIndicator": {
+              "type": "string"
+            },
+            "lastTradeTimestamp": {
+              "type": "string"
+            },
+            "isRealTime": {
+              "type": "boolean"
+            },
+            "bidPrice": {
+              "type": "string"
+            },
+            "askPrice": {
+              "type": "string"
+            },
+            "volume": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "lastSalePrice",
+            "netChange",
+            "percentageChange",
+            "deltaIndicator",
+            "lastTradeTimestamp",
+            "isRealTime",
+            "bidPrice",
+            "askPrice",
+            "volume"
+          ]
+        },
+        "secondaryData": {
+          "type": "object",
+          "properties": {
+            "lastSalePrice": {
+              "type": "string"
+            },
+            "netChange": {
+              "type": "string"
+            },
+            "percentageChange": {
+              "type": "string"
+            },
+            "deltaIndicator": {
+              "type": "string"
+            },
+            "lastTradeTimestamp": {
+              "type": "string"
+            },
+            "isRealTime": {
+              "type": "boolean"
+            },
+            "bidPrice": {
+              "type": "string"
+            },
+            "askPrice": {
+              "type": "string"
+            },
+            "volume": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "lastSalePrice",
+            "netChange",
+            "percentageChange",
+            "deltaIndicator",
+            "lastTradeTimestamp",
+            "isRealTime",
+            "bidPrice",
+            "askPrice",
+            "volume"
+          ]
+        },
+        "marketStatus": {
+          "type": "string"
+        },
+        "assetClass": {
+          "type": "string"
+        },
+        "keyStats": {
+          "type": "null"
+        },
+        "notifications": {
+          "type": "array",
+          "items": {}
+        }
+      },
+      "required": [
+        "symbol",
+        "companyName",
+        "stockType",
+        "exchange",
+        "isNasdaqListed",
+        "isNasdaq100",
+        "isHeld",
+        "primaryData",
+        "secondaryData",
+        "marketStatus",
+        "assetClass",
+        "keyStats",
+        "notifications"
+      ]
+    },
+    "message": {
+      "type": "null"
+    },
+    "status": {
+      "type": "object",
+      "properties": {
+        "rCode": {
+          "type": "integer"
+        },
+        "bCodeMessage": {
+          "type": "null"
+        },
+        "developerMessage": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "rCode",
+        "bCodeMessage",
+        "developerMessage"
+      ]
+    }
+  },
+  "required": [
+    "data",
+    "message",
+    "status"
+  ]
+}
