@@ -8,10 +8,11 @@ describe('A test against a page with dynamic content', () => {
         })
         cy.visit('https://www.nasdaq.com/market-activity/stocks/aapl/', {headers: {"Accept-Encoding": "gzip, deflate"}})
         cy.wait('@pricingInfo').then(res => {
+            cy.clock()
+            cy.get(nasdaqPage.price).should('include.text', res.response.body.data.primaryData.lastSalePrice)
+            cy.get(nasdaqPage.priceChange).should('include.text', res.response.body.data.primaryData.netChange)
+            cy.get(nasdaqPage.priceChangePercent).should('include.text', res.response.body.data.primaryData.percentageChange)
             expect(res.response.body).to.be.jsonSchema(schema)
-            cy.get(nasdaqPage.price).should('include.text', res.response.body.data.secondaryData.lastSalePrice)
-            cy.get(nasdaqPage.priceChange).should('include.text', res.response.body.data.secondaryData.netChange)
-            cy.get(nasdaqPage.priceChangePercent).should('include.text', res.response.body.data.secondaryData.percentageChange)
         })
     });
 })

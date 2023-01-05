@@ -69,47 +69,7 @@
           ]
         },
         "secondaryData": {
-          "type": "object",
-          "properties": {
-            "lastSalePrice": {
-              "type": "string"
-            },
-            "netChange": {
-              "type": "string"
-            },
-            "percentageChange": {
-              "type": "string"
-            },
-            "deltaIndicator": {
-              "type": "string"
-            },
-            "lastTradeTimestamp": {
-              "type": "string"
-            },
-            "isRealTime": {
-              "type": "boolean"
-            },
-            "bidPrice": {
-              "type": "string"
-            },
-            "askPrice": {
-              "type": "string"
-            },
-            "volume": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "lastSalePrice",
-            "netChange",
-            "percentageChange",
-            "deltaIndicator",
-            "lastTradeTimestamp",
-            "isRealTime",
-            "bidPrice",
-            "askPrice",
-            "volume"
-          ]
+          "type": ["object", "null"]
         },
         "marketStatus": {
           "type": "string"
@@ -121,8 +81,7 @@
           "type": "null"
         },
         "notifications": {
-          "type": "array",
-          "items": {}
+          "type": ["array", "null"]
         }
       },
       "required": [
